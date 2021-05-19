@@ -1,0 +1,43 @@
+#wrapper{
+    margin: 15px auto;
+    max-width: 940px;
+}
+
+.all_box{
+    background-color: antiquewhite;
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+    /* overflow: auto; */
+}
+
+.calendar_select{
+    background-color: antiquewhite;
+    color: lightpink;
+    border: 1px solid #bfc222;
+    border-radius: 3px;
+    padding: 5px 1em;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button_box{
+    cursor: pointer;
+    display: inline-block;
+    background-color: cornflowerblue;
+    color: darkgoldenrod;
+    border: 1px solid #000ffd;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.table_box{
+    border-collapse: collapse;
+    width: 100%;
+}
+.day :first-child{
+    color: red;
+}
+.day :last-child{
+    color: blue;
+}
