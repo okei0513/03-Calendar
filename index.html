@@ -31,7 +31,7 @@
             <select id="year" onchange="jump()"></select>
         </div>
 
-        <h2 id="year_month">2021年 5月</h2>
+        <h1 id="year_month">2021年 5月</h1>
 
         <div class="button_box">
             <button class="back" onclick="back()"></button>
@@ -41,7 +41,7 @@
         <!--表-->
         <table border="1" class="table_box">
             <thead>
-                <tr>
+                <tr class="week">
                     <th>日</th>
                     <th>月</th>
                     <th>火</th>
@@ -97,6 +97,27 @@
                 </tr>
             </thead>
         </table>
+
+
+        <!--カレンダー内付箋テスト-->
+        <textarea id="text_area"></textarea>
+        <ul>
+            <li id="save">保存</li>
+            <li id="clear">削除</li>
+        </ul>
+
+
+        <!--下の付箋テスト＿追加-->
+        <div id="controller">
+            <input type="button" id="add-button" value="追加">
+        </div>
+        <div id="sticky-note-container">
+        </div>
+        <!----下の付箋テスト＿削除-->
+        <div class="note">
+            <input type="text">
+            <input class="delete-button" type="button" value="削除">
+        </div>
 
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

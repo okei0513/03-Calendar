@@ -19,3 +19,52 @@ const hyouji = [
     { month: "12月", year: "2021年" },
 ];
 
+
+
+//カレンダー内のタスク
+
+$("#save").on("click", function () {
+    const text = $("#text_area").val();//データ保存
+    localStorage.setItem("memo", text);
+});
+
+$("#clear").on("click", function () {
+    localStorage.removeItem("memo");//データ削除
+    $("#text_area").val("");
+});
+
+if (localStorage.getItem("memo")) {
+    const text = localStorage.getItem("memo");//データ取得
+    $("#text_area").val(text);
+};
+
+
+//下の付箋テスト＿＿削除ボタン
+function getNewNote() {
+    return '<div class="note">' +
+        '<input type="text">' +
+        '<input class="delete-button" type="button" value="削除">' +
+        '</div>';
+}
+
+$('#add-button').on('click', function () {
+    var $note = $(getNewNote());
+    $note.draggable();
+    $note.children(".delete-button")
+        .on('click', function () {
+            $(this).parents('.note').remove();
+        });
+    $('#sticky-note-container').append($note);
+});
+
+//下の付箋テスト＿＿追加するボタン
+function getNewNote() {
+    return '<div class="note">' +
+        '<input type="text">' +
+        '</div>';
+}
+
+$('#add-button').on('click', function () {
+    var note = getNewNote();
+    $('#sticky-note-container').append(note);
+});
