@@ -55,11 +55,8 @@
 
 
 /*カレンダー内の付箋*/
-.memo_css{
-    margin: 0px;
-}
 
-.textarea{
+/*.textarea{
     width: 250px;
     height: 7em;
     font: size 100%;
@@ -67,7 +64,7 @@
 }
 .save_clear_btn{
     margin-top: 0ex;
-}
+}*/
 
 li{
     list-style-type:none;

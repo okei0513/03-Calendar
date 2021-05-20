@@ -19,30 +19,52 @@ const hyouji = [
     { month: "12月", year: "2021年" },
 ];
 
-
 //カレンダー内のタスク
 //数字を押したらメモが出る・メモが閉じる
-$("#memo_box").hide();
+$(".memo_box1").hide();
 
-$("#output_memo").on("click", function () {
-    $("#memo_box").toggle();
+//1日
+$(".memo_css1").on("click", function () {
+    $(".memo_box1").toggle();
 });
 
 //メモの保存
 //保存
-$("#save").on("click", function () {
-    const text = $("#text_area").val();
+$(".save1").on("click", function () {
+    const text = $(".text_area1").val();
     localStorage.setItem("memo", text);
 });
 //削除
-$("#clear").on("click", function () {
+$(".clear1").on("click", function () {
     localStorage.removeItem("memo");
-    $("#text_area").val("");
+    $(".text_area1").val("");
 });
 //取得
 if (localStorage.getItem("memo")) {
     const text = localStorage.getItem("memo");
-    $("#text_area").val(text);
+    $(".text_area1").val(text);
+};
+
+//2日
+
+$(".memo_box2").hide();
+$(".memo_css2").on("click", function () {
+    $(".memo_box2").toggle();
+});
+//保存
+$(".save2").on("click", function () {
+    const text = $(".text_area2").val();
+    localStorage.setItem("memo", text);
+});
+//削除
+$(".clear2").on("click", function () {
+    localStorage.removeItem("memo");
+    $(".text_area2").val("");
+});
+//取得
+if (localStorage.getItem("memo")) {
+    const text = localStorage.getItem("memo");
+    $(".text_area2").val(text);
 };
 
 
@@ -65,14 +87,14 @@ if (localStorage.getItem("memo")) {
 //});
 
 //下の付箋テスト＿＿追加するボタン テスト中
-function getNewNote() {
-    return '<div class="note">' +
-        '<input type="text">' +
-        '</div>';
-}
+//function getNewNote() {
+//    return '<div class="note">' +
+//        '<input type="text">' +
+//        '</div>';
+//}
 
-$('#add-button').on('click', function () {
-    var note = getNewNote();
-    $('#sticky-note-container').append(note);
-});
+//$('#add-button').on('click', function () {
+//    var note = getNewNote();
+//    $('#sticky-note-container').append(note);
+//});
 
