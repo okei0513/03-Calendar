@@ -8,7 +8,6 @@
     width: 100%;
     padding: 15px;
     margin: 0 auto;
-    /* overflow: auto; */
 }
 
 .calendar_select{
@@ -55,25 +54,32 @@
 
 
 
-/*カレンダー内の付箋テスト*/
+/*カレンダー内の付箋*/
 .memo_css{
     margin: 0px;
 }
 
 .textarea{
+    width: 250px;
+    height: 7em;
     font: size 100%;
     box-shadow: 3px 3px 3px 3px #555;
 }
 .save_clear_btn{
     margin-top: 0ex;
 }
+
 li{
     list-style-type:none;
     border: 1px solid #666;
     background-color: #FFF;
-    display:table-cell;  /* 定義 */
+    display:table-cell;
     cursor: pointer;
     font-size: 20px;
+}
+li:hover{
+    background: #0066CC;
+    color:#fff;
 }
 
 

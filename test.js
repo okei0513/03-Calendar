@@ -29,41 +29,42 @@ $("#output_memo").on("click", function () {
 });
 
 //メモの保存
+//保存
 $("#save").on("click", function () {
-    const text = $("#text_area").val();//データ保存
+    const text = $("#text_area").val();
     localStorage.setItem("memo", text);
 });
-
+//削除
 $("#clear").on("click", function () {
-    localStorage.removeItem("memo");//データ削除
+    localStorage.removeItem("memo");
     $("#text_area").val("");
 });
-
+//取得
 if (localStorage.getItem("memo")) {
-    const text = localStorage.getItem("memo");//データ取得
+    const text = localStorage.getItem("memo");
     $("#text_area").val(text);
 };
 
 
-//下の付箋テスト＿＿削除ボタン
-function getNewNote() {
-    return '<div class="note">' +
-        '<input type="text">' +
-        '<input class="delete-button" type="button" value="削除">' +
-        '</div>';
-}
+//下の付箋テスト＿＿削除ボタン テスト中
+//function getNewNote() {
+//    return '<div class="note">' +
+//        '<input type="text">' +
+//        '<input class="delete-button" type="button" value="削除">' +
+//        '</div>';
+//}
 
-$('#add-button').on('click', function () {
-    var $note = $(getNewNote());
-    $note.draggable();
-    $note.children(".delete-button")
-        .on('click', function () {
-            $(this).parents('.note').remove();
-        });
-    $('#sticky-note-container').append($note);
-});
+//$('#add-button').on('click', function () {
+//    var $note = $(getNewNote());
+//    $note.draggable();
+//    $note.children(".delete-button")
+//        .on('click', function () {
+//            $(this).parents('.note').remove();
+//       });
+//    $('#sticky-note-container').append($note);
+//});
 
-//下の付箋テスト＿＿追加するボタン
+//下の付箋テスト＿＿追加するボタン テスト中
 function getNewNote() {
     return '<div class="note">' +
         '<input type="text">' +
@@ -74,3 +75,4 @@ $('#add-button').on('click', function () {
     var note = getNewNote();
     $('#sticky-note-container').append(note);
 });
+
