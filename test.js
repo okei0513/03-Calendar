@@ -21,14 +21,13 @@ const hyouji = [
 
 //カレンダー内のタスク
 //数字を押したらメモが出る・メモが閉じる
-$(".memo_box1").hide();
 
-//1日
+////1日
+$(".memo_box1").hide();
 $(".memo_css1").on("click", function () {
     $(".memo_box1").toggle();
 });
 
-//メモの保存
 //保存
 $(".save1").on("click", function () {
     const text = $(".text_area1").val();
@@ -45,8 +44,7 @@ if (localStorage.getItem("memo")) {
     $(".text_area1").val(text);
 };
 
-//2日
-
+////2日
 $(".memo_box2").hide();
 $(".memo_css2").on("click", function () {
     $(".memo_box2").toggle();
@@ -66,6 +64,29 @@ if (localStorage.getItem("memo")) {
     const text = localStorage.getItem("memo");
     $(".text_area2").val(text);
 };
+
+
+////3日
+//$(".memo_box3").hide();
+//$(".memo_css3").on("click", function () {
+    //$(".memo_box3").toggle();
+//});
+
+//保存
+//$(".save3").on("click", function () {
+  //  const text = $(".text_area3").val();
+    //localStorage.setItem("memo", text);
+//});
+//削除
+//$(".clear3").on("click", function () {
+  //  localStorage.removeItem("memo");
+    //$(".text_area3").val("");
+//});
+//取得
+//if (localStorage.getItem("memo")) {
+  //  const text = localStorage.getItem("memo");
+    //$(".text_area3").val(text);
+//};
 
 
 //下の付箋テスト＿＿削除ボタン テスト中
