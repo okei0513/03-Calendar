@@ -27,7 +27,6 @@ $(".memo_box1").hide();
 $(".memo_css1").on("click", function () {
     $(".memo_box1").toggle();
 });
-
 //保存
 $(".save1").on("click", function () {
     const text = $(".text_area1").val();
@@ -65,29 +64,68 @@ if (localStorage.getItem("memo")) {
     $(".text_area2").val(text);
 };
 
-
-////3日
-//$(".memo_box3").hide();
-//$(".memo_css3").on("click", function () {
-    //$(".memo_box3").toggle();
-//});
-
+////３日
+$(".memo_box3").hide();
+$(".memo_css3").on("click", function () {
+    $(".memo_box3").toggle();
+});
 //保存
-//$(".save3").on("click", function () {
-  //  const text = $(".text_area3").val();
-    //localStorage.setItem("memo", text);
-//});
+$(".save3").on("click", function () {
+    const text = $(".text_area3").val();
+    localStorage.setItem("memo", text);
+});
 //削除
-//$(".clear3").on("click", function () {
-  //  localStorage.removeItem("memo");
-    //$(".text_area3").val("");
-//});
+$(".clear3").on("click", function () {
+    localStorage.removeItem("memo");
+    $(".text_area3").val("");
+});
 //取得
-//if (localStorage.getItem("memo")) {
-  //  const text = localStorage.getItem("memo");
-    //$(".text_area3").val(text);
-//};
+if (localStorage.getItem("memo")) {
+    const text = localStorage.getItem("memo");
+    $(".text_area3").val(text);
+};
 
+////4日
+$(".memo_box4").hide();
+$(".memo_css4").on("click", function () {
+    $(".memo_box4").toggle();
+});
+//保存
+$(".save4").on("click", function () {
+    const text = $(".text_area4").val();
+    localStorage.setItem("memo", text);
+});
+//削除
+$(".clear4").on("click", function () {
+    localStorage.removeItem("memo");
+    $(".text_area4").val("");
+});
+//取得
+if (localStorage.getItem("memo")) {
+    const text = localStorage.getItem("memo");
+    $(".text_area4").val(text);
+};
+
+////5日
+$(".memo_box5").hide();
+$(".memo_css5").on("click", function () {
+    $(".memo_box5").toggle();
+});
+//保存
+$(".save5").on("click", function () {
+    const text = $(".text_area5").val();
+    localStorage.setItem("memo", text);
+});
+//削除
+$(".clear5").on("click", function () {
+    localStorage.removeItem("memo");
+    $(".text_area5").val("");
+});
+//取得
+if (localStorage.getItem("memo")) {
+    const text = localStorage.getItem("memo");
+    $(".text_area5").val(text);
+};
 
 //下の付箋テスト＿＿削除ボタン テスト中
 //function getNewNote() {
