@@ -56,11 +56,16 @@
 
 
 /*カレンダー内の付箋テスト*/
+.memo_css{
+    margin: 0px;
+}
+
 .textarea{
-    margin: 3%;
-    width: 95%;
-    font-size:80%;
+    font: size 100%;
     box-shadow: 3px 3px 3px 3px #555;
+}
+.save_clear_btn{
+    margin-top: 0ex;
 }
 li{
     list-style-type:none;
@@ -68,6 +73,7 @@ li{
     background-color: #FFF;
     display:table-cell;  /* 定義 */
     cursor: pointer;
+    font-size: 20px;
 }
 
 

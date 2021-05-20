@@ -20,9 +20,15 @@ const hyouji = [
 ];
 
 
-
 //カレンダー内のタスク
+//数字を押したらメモが出る・メモが閉じる
+$("#memo_box").hide();
 
+$("#output_memo").on("click", function () {
+    $("#memo_box").toggle();
+});
+
+//メモの保存
 $("#save").on("click", function () {
     const text = $("#text_area").val();//データ保存
     localStorage.setItem("memo", text);
