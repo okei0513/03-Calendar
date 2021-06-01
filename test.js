@@ -19,9 +19,8 @@ const hyouji = [
     { month: "12月", year: "2021年" },
 ];
 
-//カレンダー内のタスク
-//数字を押したらメモが出る・メモが閉じる
 
+//カレンダー内のタスク  数字を押したらメモが出る・メモが閉じる
 ////1日
 $(".memo_box1").hide();
 $(".memo_css1").on("click", function () {
@@ -30,16 +29,16 @@ $(".memo_css1").on("click", function () {
 //保存
 $(".save1").on("click", function () {
     const text = $(".text_area1").val();
-    localStorage.setItem("memo", text);
+    localStorage.setItem("memo1", text);
 });
 //削除
 $(".clear1").on("click", function () {
-    localStorage.removeItem("memo");
+    localStorage.removeItem("memo1");
     $(".text_area1").val("");
 });
 //取得
-if (localStorage.getItem("memo")) {
-    const text = localStorage.getItem("memo");
+if (localStorage.getItem("memo1")) {
+    const text = localStorage.getItem("memo1");
     $(".text_area1").val(text);
 };
 
@@ -51,16 +50,16 @@ $(".memo_css2").on("click", function () {
 //保存
 $(".save2").on("click", function () {
     const text = $(".text_area2").val();
-    localStorage.setItem("memo", text);
+    localStorage.setItem("memo2", text);
 });
 //削除
 $(".clear2").on("click", function () {
-    localStorage.removeItem("memo");
+    localStorage.removeItem("memo2");
     $(".text_area2").val("");
 });
 //取得
-if (localStorage.getItem("memo")) {
-    const text = localStorage.getItem("memo");
+if (localStorage.getItem("memo2")) {
+    const text = localStorage.getItem("memo2");
     $(".text_area2").val(text);
 };
 
@@ -72,16 +71,16 @@ $(".memo_css3").on("click", function () {
 //保存
 $(".save3").on("click", function () {
     const text = $(".text_area3").val();
-    localStorage.setItem("memo", text);
+    localStorage.setItem("memo3", text);
 });
 //削除
 $(".clear3").on("click", function () {
-    localStorage.removeItem("memo");
+    localStorage.removeItem("memo3");
     $(".text_area3").val("");
 });
 //取得
-if (localStorage.getItem("memo")) {
-    const text = localStorage.getItem("memo");
+if (localStorage.getItem("memo3")) {
+    const text = localStorage.getItem("memo3");
     $(".text_area3").val(text);
 };
 
@@ -93,16 +92,16 @@ $(".memo_css4").on("click", function () {
 //保存
 $(".save4").on("click", function () {
     const text = $(".text_area4").val();
-    localStorage.setItem("memo", text);
+    localStorage.setItem("memo4", text);
 });
 //削除
 $(".clear4").on("click", function () {
-    localStorage.removeItem("memo");
+    localStorage.removeItem("memo4");
     $(".text_area4").val("");
 });
 //取得
-if (localStorage.getItem("memo")) {
-    const text = localStorage.getItem("memo");
+if (localStorage.getItem("memo4")) {
+    const text = localStorage.getItem("memo4");
     $(".text_area4").val(text);
 };
 
@@ -114,16 +113,16 @@ $(".memo_css5").on("click", function () {
 //保存
 $(".save5").on("click", function () {
     const text = $(".text_area5").val();
-    localStorage.setItem("memo", text);
+    localStorage.setItem("memo5", text);
 });
 //削除
 $(".clear5").on("click", function () {
-    localStorage.removeItem("memo");
+    localStorage.removeItem("memo5");
     $(".text_area5").val("");
 });
 //取得
-if (localStorage.getItem("memo")) {
-    const text = localStorage.getItem("memo");
+if (localStorage.getItem("memo5")) {
+    const text = localStorage.getItem("memo5");
     $(".text_area5").val(text);
 };
 

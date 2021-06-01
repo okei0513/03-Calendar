@@ -45,14 +45,19 @@
     border-collapse: collapse;
     width: 100%;
 }
-.day :first-child{
+.week :first-child{
+    color: red;
+}
+.week :last-child{
+    color: blue;
+}
+
+/*.day :first-child{
     color: red;
 }
 .day :last-child{
     color: blue;
 }
-
-
 
 /*カレンダー内の付箋*/
 
